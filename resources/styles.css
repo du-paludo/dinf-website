@@ -1,6 +1,5 @@
 body {
     display: flex;
-    text-justify: auto;
     margin: 0;
     padding: 0;
     flex-direction: row;
@@ -18,12 +17,18 @@ nav {
 
 nav ul {
 	list-style-type: none;
-	padding: 0;
+    padding: 0;
+}
+
+nav span {
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
 }
 
 nav ul li {
     margin-bottom: 20px;
-    padding: 10px 12px;
     text-align: center;
 }
 
@@ -37,22 +42,30 @@ nav li img {
     margin-top: 40px;
 }
 
+p.image-description {
+    text-align: center;
+    color: azure;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
 nav li a {
-    padding: 10px 12px;
-    border-radius: 4px;
     text-decoration: none;
     color: azure;
 }
 
-nav li.current-page {
-    border-radius: 4px;
+nav span.current-page {
     color: black;
     background-color: azure;
 }
 
-nav li a:hover {
-    padding: 10px 12px;
+nav span:hover:not(.current-page) {
 	background-color: #555;
+}
+
+hr.solid {
+    border-top: 3px solid white;
+    padding: 12px;
 }
 
 main {
@@ -67,19 +80,7 @@ p {
     text-align: justify;
 }
 
-p.image-description {
-    text-align: center;
-    color: azure;
-    margin-top: 10px;
-}
-
 p a {
     text-decoration: none;
     color: cornflowerblue;
-    
-}
-
-hr.solid {
-    border-top: 3px solid white;
-    padding: 12px;
 }
